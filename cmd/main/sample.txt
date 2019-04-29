@@ -1,0 +1,200 @@
+{
+  "log": {
+    "version": "1.1",
+    "creator": {
+      "name": "Firefox",
+      "version": "66.0.3"
+    },
+    "browser": {
+      "name": "Firefox",
+      "version": "66.0.3"
+    },
+    "pages": [
+      {
+        "startedDateTime": "2019-04-29T02:01:25.518+03:00",
+        "id": "page_1",
+        "title": "Rasterization: a Practical Implementation (Rasterization: a Practical Implementation)",
+        "pageTimings": {
+          "onContentLoad": -8283,
+          "onLoad": 326
+        }
+      }
+    ],
+    "entries": [
+      {
+        "pageref": "page_1",
+        "startedDateTime": "2019-04-29T02:01:25.518+03:00",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "http://localhost:8008/",
+          "httpVersion": "HTTP/1.0",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "localhost:8008"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+            },
+            {
+              "name": "Accept",
+              "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate"
+            },
+            {
+              "name": "DNT",
+              "value": "1"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "name": "Upgrade-Insecure-Requests",
+              "value": "1"
+            }
+          ],
+          "cookies": [],
+          "queryString": [],
+          "headersSize": 331
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.0",
+          "headers": [
+            {
+              "name": "Server",
+              "value": "BaseHTTP/0.6 Python/3.7.3"
+            },
+            {
+              "name": "Date",
+              "value": "Sun, 28 Apr 2019 23:01:25 GMT"
+            },
+            {
+              "name": "Content-type",
+              "value": "text/plain; charset=utf-8"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "text/plain; charset=utf-8",
+            "size": 13,
+            "text": "Hello, HTTP!\n"
+          },
+          "redirectURL": "",
+          "headersSize": 132,
+          "bodySize": 145
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 265,
+          "dns": 0,
+          "connect": 264,
+          "ssl": 0,
+          "send": 0,
+          "wait": 0,
+          "receive": 0
+        },
+        "time": 529,
+        "_securityState": "insecure",
+        "serverIPAddress": "127.0.0.1",
+        "connection": "8008"
+      },
+      {
+        "pageref": "page_1",
+        "startedDateTime": "2019-04-29T02:01:25.909+03:00",
+        "request": {
+          "bodySize": 0,
+          "method": "GET",
+          "url": "http://localhost:8008/favicon.ico",
+          "httpVersion": "HTTP/1.0",
+          "headers": [
+            {
+              "name": "Host",
+              "value": "localhost:8008"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0"
+            },
+            {
+              "name": "Accept",
+              "value": "image/webp,*/*"
+            },
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Accept-Encoding",
+              "value": "gzip, deflate"
+            },
+            {
+              "name": "DNT",
+              "value": "1"
+            },
+            {
+              "name": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookies": [],
+          "queryString": [],
+          "headersSize": 263
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "httpVersion": "HTTP/1.0",
+          "headers": [
+            {
+              "name": "Server",
+              "value": "BaseHTTP/0.6 Python/3.7.3"
+            },
+            {
+              "name": "Date",
+              "value": "Sun, 28 Apr 2019 23:01:25 GMT"
+            },
+            {
+              "name": "Content-type",
+              "value": "text/plain; charset=utf-8"
+            }
+          ],
+          "cookies": [],
+          "content": {
+            "mimeType": "text/plain; charset=utf-8",
+            "size": 13,
+            "text": "Hello, HTTP!\n"
+          },
+          "redirectURL": "",
+          "headersSize": 132,
+          "bodySize": 145
+        },
+        "cache": {},
+        "timings": {
+          "blocked": 0,
+          "dns": 0,
+          "connect": 0,
+          "ssl": 0,
+          "send": 0,
+          "wait": 0,
+          "receive": 0
+        },
+        "time": 0,
+        "_securityState": "insecure",
+        "serverIPAddress": "127.0.0.1",
+        "connection": "8008"
+      }
+    ]
+  }
+}

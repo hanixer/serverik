@@ -1,0 +1,62 @@
+GET / HTTP/1.1 
+host: www.google.com 
+connection: keep-alive 
+ 
+---
+GET / HTTP/1.1 
+Host: localhost:8000 
+User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0 
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8 
+Accept-Language: en-US,en;q=0.5 
+Accept-Encoding: gzip, deflate 
+DNT: 1 
+Connection: keep-alive 
+Upgrade-Insecure-Requests: 1 
+ 
+---
+POST /GTSGIAG3 HTTP/1.1 
+Host: ocsp.pki.goog 
+User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0 
+Accept: */* 
+Accept-Language: en-US,en;q=0.5 
+Accept-Encoding: gzip, deflate 
+Content-Type: application/ocsp-request 
+Content-Length: 83 
+DNT: 1 
+Connection: keep-alive 
+ 
+---
+GET / HTTP/1.1 
+Host: luxoft.com 
+User-Agent: Mozilla/5.0 (Windows NT 6.3; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0 
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8 
+Accept-Language: en-US,en;q=0.5 
+Accept-Encoding: gzip, deflate 
+DNT: 1 
+Connection: keep-alive 
+Upgrade-Insecure-Requests: 1 
+ 
+---
+GET / HTTP/1.1
+connection: keep-alive
+host: www.luxoft.com
+
+---
+0000   47 45 54 20 2f 20 48 54 54 50 2f 31 2e 31 0d 0a
+0010   63 6f 6e 6e 65 63 74 69 6f 6e 3a 20 6b 65 65 70
+0020   2d 61 6c 69 76 65 0d 0a 68 6f 73 74 3a 20 77 77
+0030   77 2e 6c 75 78 6f 66 74 2e 63 6f 6d 0d 0a 0d 0a
+GET / HTTP/1.1
+connection: keep-alive
+host: www.luxoft.com
+
+474554202f20485454502f312e310d0a636f6e6e656374696f6e3a206b6565702d616c6976650d0a686f73743a207777772e6c75786f66742e636f6d0d0a0d0a
+"\x47\x45\x54\x20\x2f\x20\x48\x54\x54\x50\x2f\x31\x2e\x31\x0d\x0a\x63\x6f\x6e\x6e\x65\x63\x74\x69\x6f\x6e\x3a\x20\x6b\x65\x65\x70\x2d\x61\x6c\x69\x76\x65\x0d\x0a\x68\x6f\x73\x74\x3a\x20\x77\x77\x77\x2e\x6c\x75\x78\x6f\x66\x74\x2e\x63\x6f\x6d\x0d\x0a\x0d\x0a"
+
+---
+GET / HTTP/1.1
+connection: keep-alive
+Accept-Encoding: gzip, deflate
+User-Agent: golang app for http requests
+host: www.luxoft.com
+
