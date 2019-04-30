@@ -20,7 +20,7 @@ func handleRequest(conn net.Conn, handler RequestHandler) {
 	request, err := ReadRequest(conn)
 
 	if err != nil {
-		log.Fatal(err)
+		log.Println("ReadRequest error.", err)
 		conn.Close()
 		return
 	}
@@ -31,17 +31,17 @@ func handleRequest(conn net.Conn, handler RequestHandler) {
 func Serve(port int, handler RequestHandler) {
 	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", port))
 	if err != nil {
-		log.Fatalln("net.Listen", err)
+		log.Println("net.Listen", err)
 	}
 
 	for {
 		conn, err := listener.Accept()
 		if err != nil {
-			log.Fatalln("listener.Accept.", err)
+			log.Println("listener.Accept.", err)
 			return
 		}
 
-		go handleRequest(conn, handler)
+		handleRequest(conn, handler)
 	}
 }
 
@@ -64,6 +64,6 @@ func ServeFunc(dir string, port int, handler func(*HttpRequest, net.Conn)) {
 			return
 		}
 
-		go handleRequestFunc(conn, handler)
+		handleRequestFunc(conn, handler)
 	}
 }

@@ -10,11 +10,13 @@ import (
 
 type Headers map[string]string
 
-func ReadWhileEmptyLines(reader *bufio.Reader) string {
+func ReadWhileEmptyLines(reader *bufio.Reader) (string, error) {
 	for {
-		line, _ := reader.ReadString('\n')
-		if len(line) > 0 {
-			return line
+		line, err := reader.ReadString('\n')
+		if err != nil {
+			return "", err
+		} else if len(line) > 0 {
+			return line, nil
 		}
 	}
 }

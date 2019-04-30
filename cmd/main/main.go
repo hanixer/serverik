@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net"
 
@@ -17,11 +18,11 @@ var forms = `
 <form method="POST" action="http://localhost:8000/">
 Origin URL
 <br>
-<textarea name="origin"></textarea>
+<textarea name="origin">www.google.com</textarea>
 <br>
 Shortened URL key
 <br>
-<textarea name="short"></textarea>
+<textarea name="short">ge</textarea>
 <br>
 <button type="submit">Post it!</button>
 </form>`
@@ -58,10 +59,10 @@ func (serv *BookmarkServ) HandleGET(request *HttpRequest, conn net.Conn) {
 			response.SetStringContent(wrongRecord)
 		} else {
 			response.AddHeader("location", v)
-			response.SetResponse(303)
+			response.SetResponse(302)
 		}
 	}
-
+	fmt.Printf("==>\n%q\n", string(response.ToBytes()))
 	conn.Write(response.ToBytes())
 	conn.Close()
 }
@@ -114,7 +115,7 @@ func (serv *BookmarkServ) HandleRequest(request *HttpRequest, conn net.Conn) {
 	} else if request.Method == "POST" {
 		serv.HandlePOST(request, conn)
 	} else {
-		log.Fatal("Unknown method")
+		log.Print("Unknown method")
 		response := NewHttpResponse()
 		response.SetResponse(501)
 		conn.Write(response.ToBytes())

@@ -39,7 +39,10 @@ func ReadRequest(r io.Reader) (*HttpRequest, error) {
 	reader := bufio.NewReader(r)
 
 	// Request-Line   = Method SP Request-URI SP HTTP-Version CRLF
-	requestLine := ReadWhileEmptyLines(reader)
+	requestLine, err := ReadWhileEmptyLines(reader)
+	if err != nil {
+		return nil, err
+	}
 
 	index1 := strings.Index(requestLine, " ")
 	request.Method = requestLine[:index1]
@@ -63,7 +66,7 @@ func ReadRequest(r io.Reader) (*HttpRequest, error) {
 	buffer := make([]byte, length)
 	n, err := io.ReadFull(reader, buffer)
 	if err != nil {
-		log.Fatalf("Read only %d bytes, expected %d", n, length)
+		log.Printf("Read only %d bytes, expected %d", n, length)
 		return request, err
 	}
 	request.Buffer = buffer

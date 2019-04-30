@@ -101,8 +101,11 @@ func ReadResponse(r io.Reader) (HttpResponse, error) {
 	var response HttpResponse
 	reader := bufio.NewReader(r)
 	response.Headers = make(Headers)
-	statusLine := ReadWhileEmptyLines(reader)
+	statusLine, err := ReadWhileEmptyLines(reader)
 
+	if err != nil {
+		return response, err
+	}
 	if len(statusLine) < 1 {
 		return response, fmt.Errorf("empty status line")
 	}
